@@ -1,2 +1,5 @@
-grunt-js
+Gruntjs
 ========
+
+### Gruntjs
+The JavaScript Task Runner
