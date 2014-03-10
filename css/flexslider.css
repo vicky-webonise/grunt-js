@@ -1,0 +1,167 @@
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+.flexslider
+{
+	margin:0;
+	padding:0
+}
+
+.flexslider .slides > li
+{
+	-webkit-backface-visibility:hidden;
+	display:none;
+	font-size:14px;
+	font-style:italic;
+	text-align:center
+}
+
+.flexslider .slides img
+{
+	display:block;
+	margin-bottom:10px;
+	width:100%
+}
+
+.flex-pauseplay span
+{
+	text-transform:capitalize
+}
+
+/* Clearfix for the .slides element */
+.slides:after
+{
+	clear:both;
+	content:"\0020";
+	display:block;
+	height:0;
+	line-height:0;
+	visibility:hidden
+}
+
+html[xmlns] .slides
+{
+	display:block
+}
+
+* html .slides
+{
+	height:1%
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+	display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider
+{
+	background:#fff;
+	margin:0 0 30px;
+	position:relative;
+	zoom:1
+}
+
+.flex-viewport
+{
+	-moz-transition:all 1s ease;
+	-o-transition:all 1s ease;
+	-webkit-transition:all 1s ease;
+	max-height:2000px;
+	transition:all 1s ease
+}
+
+.loading .flex-viewport
+{
+	max-height:300px
+}
+
+.flexslider .slides
+{
+	zoom:1
+}
+
+.carousel li
+{
+	margin-right:5px
+}
+
+
+/* Pause/Play */
+.flex-pauseplay a
+{
+	bottom:5px;
+	color:#000;
+	cursor:pointer;
+	display:block;
+	height:20px;
+	left:10px;
+	opacity:0.8;
+	overflow:hidden;
+	position:absolute;
+	width:20px;
+	z-index:10
+}
+
+.flex-pauseplay a:before
+{
+	content:'\f004';
+	display:inline-block;
+	font-family:flexslider-icon;
+	font-size:20px
+}
+
+.flex-pauseplay a:hover
+{
+	opacity:1
+}
+
+.flex-pauseplay a.flex-play:before
+{
+	content:'\f003'
+}
+
+/* Control Nav */
+.flex-control-nav {
+	width: 100%; 
+	position: absolute; 
+	bottom: -30px; 
+	text-align: center; 
+	background: url(../images/sliderLine.jpg) left 9px repeat-x;
+}
+.flex-control-nav li:first-child{
+	margin: 0 3px 0 0
+}
+.flex-control-nav li {
+	margin: 0 0 0 85px; 
+	display: inline-block; 
+	zoom: 1; 
+	*display: inline;
+}
+.flex-control-paging li a {
+	width: 19px; 
+	height: 19px; 
+	display: block; 
+	text-indent: -9999px;
+	cursor:pointer
+}
+.flex-control-paging li a:hover {
+}
+.flex-control-paging li a.flex-active {
+	cursor: default;
+}
+
+
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
+  .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+}

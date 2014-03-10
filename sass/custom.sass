@@ -1,0 +1,636 @@
+@import "icon/*.png"
+
+body
+  font-family: helvetica
+  font-size: 13px
+  color: #222222
+
+a
+  color: #3355aa
+  &:hover, &:focus
+    text-decoration: none
+    color: #000000
+    outline: 0
+
+.logo
+  font: italic bold 52px / 35px "Times New Roman", Times, serif
+  color: #3355AA
+  display: block
+  margin: 13px 0 13px 20px
+  float: left
+  background: url(../images/logo.jpg)
+  height: 57px
+  width: 239px
+  text-indent: -10000px
+
+.topMenu
+  float: right
+  margin: 0
+  list-style-type: none
+  li
+    float: left
+    background: url(../images/topMenuDivider.jpg) left top no-repeat
+    position: relative
+    a
+      display: block
+      color: #3355aa
+      font-size: 15px
+      .menu-icon
+        @include icon-sprite(home)
+        height: 14px
+        width: 14px
+        display: inline-block
+        vertical-align: middle
+        margin-right: 4px
+      .menu-txt
+        margin: 0 12px
+        line-height: 38px
+        display: block
+    &:hover a, &.active a
+      color: #222222
+      background: url(../images/topMenuOver.jpg) left top repeat-x
+    &:hover a .menu-txt, &.active a .menu-txt
+      border-bottom: 3px solid #eebe00
+    a
+      .icon-about
+        @include icon-sprite(about)
+      .icon-blog
+        @include icon-sprite(blog)
+      .icon-contact
+        @include icon-sprite(contact)
+
+.search
+  float: right
+  margin-top: 5px
+  .searchBox
+    background: #214193
+    border: 1px solid #0f2356
+    padding: 7px
+    color: #5971ae
+    float: left
+    margin-bottom: 0
+    height: 15px
+    width: 156px
+    font-size: 13px
+    -webkit-box-shadow: 0px 1px 0px #4866b3
+    -moz-box-shadow: 0px 1px 0px #4866b3
+    box-shadow: 0px 1px 0px #4866b3
+    -webkit-border-radius: 4px
+    -moz-border-radius: 4px
+    border-radius: 4px
+
+.buttonGo
+  width: 38px
+  height: 31px
+  float: left
+  text-align: center
+  padding: 0
+  margin: 0 0 0 10px
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75)
+  vertical-align: middle
+  cursor: pointer
+  background-color: #5275cd
+  background-image: -ms-linear-gradient(top, #5275cd, #4067c8)
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5275cd), to(#4067c8))
+  background-image: -webkit-linear-gradient(top, #5275cd, #4067c8)
+  background-image: -o-linear-gradient(top, #5275cd, #4067c8)
+  background-image: linear-gradient(top, #5275cd, #4067c8)
+  background-image: -moz-linear-gradient(top, #5275cd, #4067c8)
+  background-repeat: repeat-x
+  border: 1px solid #1c3980
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#5275cd', endColorstr='#4067c8', GradientType=0)
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false)
+  *zoom: 1
+  -webkit-box-shadow: 0px 1px 0px #4866b3
+  -moz-box-shadow: 0px 1px 0px #4866b3
+  box-shadow: 0px 1px 0px #4866b3
+  &:hover
+    background-color: #4067c8
+    background-image: -ms-linear-gradient(top, #4067c8, #5275cd)
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4067c8), to(#5275cd))
+    background-image: -webkit-linear-gradient(top, #4067c8, #5275cd)
+    background-image: -o-linear-gradient(top, #4067c8, #5275cd)
+    background-image: linear-gradient(top, #4067c8, #5275cd)
+    background-image: -moz-linear-gradient(top, #4067c8, #5275cd)
+    background-repeat: repeat-x
+    border: 1px solid #1c3980
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#4067c8', endColorstr='#5275cd', GradientType=0)
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false)
+
+.icon-search
+  @include icon-sprite(search)
+  width: 16px
+  display: inline-block
+
+.navbar
+  .container
+    width: 940px
+  margin-bottom: 37px
+
+.navbar-inverse
+  .navbar-inner
+    background: #3355AA
+    background-image: -moz-linear-gradient(top, #3355aa, #3355aa)
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3355aa), to(#3355aa))
+    background-image: -webkit-linear-gradient(top, #3355aa, #3355aa)
+    background-image: -o-linear-gradient(top, #3355aa, #3355aa)
+    background-image: linear-gradient(to bottom, #3355aa, #3355aa)
+    background-repeat: repeat-x
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3355AA', endColorstr='#3355AA', GradientType=0)
+    border: 0
+    padding: 0
+    -webkit-border-radius: 0px
+    -moz-border-radius: 0px
+    border-radius: 0px
+  .brand, .nav
+    background: url(../images/navDivider.jpg) left center no-repeat
+  .brand, .nav > li
+    float: left
+    background: url(../images/navDivider.jpg) right center no-repeat
+    font-size: 16px
+  .brand, .nav > li > a
+    color: #ffffff
+    font-style: italic
+    text-shadow: 1px 1px 1px #000000
+    padding: 11px 16px
+  .brand, .nav > li > a:hover
+    color: #eebe00
+
+.banner
+  margin-bottom: 46px
+
+.bannerInner
+  border: 1px solid #e3e3e3
+  padding: 10px
+  -webkit-box-shadow: 0 1px 5px #d1d1d1
+  -moz-box-shadow: 0 1px 5px #d1d1d1
+  box-shadow: 0 1px 5px #d1d1d1
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  *overflow: hidden
+
+.weDo
+  line-height: 20px
+  color: #666666
+  margin-bottom: 20px
+
+.announcements
+  ul
+    margin: 0
+    list-style-type: none
+  li
+    border-bottom: 1px solid #f0f0f0
+    padding-bottom: 10px
+    margin-bottom: 10px
+    font-style: italic
+    line-height: 18px
+    a
+      color: #666666
+      &:hover
+        color: #000000
+  .nameDate
+    font-size: 10px
+    color: #888888
+    font-style: normal
+    margin-top: 5px
+    display: block
+    a
+      color: #222222
+      &:hover
+        color: #666666
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+h1
+  font-size: 26px
+  line-height: 27px
+
+h3
+  font: bold 16px / 33px Arial, Helvetica, sans-serif
+  border-bottom: 3px solid #eebe00
+  text-transform: uppercase
+  color: #666666
+  margin-bottom: 10px
+  a
+    color: #3355aa
+    &:hover
+      color: #666666
+
+.iconHeading
+  @include icon-sprite(weDo)
+  background-position: left -54px
+  background-repeat: no-repeat
+  height: 33px
+  line-height: 33px
+  vertical-align: text-top
+  width: 33px
+  float: right
+
+.iconOperate
+  @include icon-sprite(weOperate)
+
+.iconAnnouncements
+  @include icon-sprite(announce)
+
+.viewMore
+  font-style: italic
+
+.sectorsWrap
+  background: #f4f5f6
+  border-top: 1px solid #dbdcdd
+
+.sectorsInner
+  h2
+    text-align: center
+    font: bold 28px Arial, Helvetica, sans-serif
+    text-transform: uppercase
+    margin: 25px 0
+  margin-bottom: 40px
+  ul
+    margin: 0
+    list-style-type: none
+    li
+      background: #fff
+      border: 1px solid #dcddde
+      width: 174px
+      float: left
+      margin-left: 15px
+      -webkit-box-shadow: 0 1px 3px #c2c2c2
+      -moz-box-shadow: 0 1px 3px #c2c2c2
+      box-shadow: 0 1px 3px #c2c2c2
+      -webkit-border-radius: 4px
+      -moz-border-radius: 4px
+      border-radius: 4px
+      a
+        display: block
+        padding: 5px
+  li h4
+    text-align: center
+    width: 150px
+    margin: 5px auto
+    font-size: 13px
+    font-weight: normal
+  ul
+    h4.inline
+      margin: 15px auto
+    li:first-child
+      margin-left: 0
+
+.dividerWrap
+  margin-bottom: 30px
+  height: 1px
+
+.sectorDivider
+  height: 1px
+  background: #ffffff
+  border-bottom: 1px solid #dedede
+
+.iconDivider
+  @include icon-sprite(divider)
+  height: 21px
+  line-height: 21px
+  vertical-align: text-top
+  width: 21px
+  text-align: center
+  display: block
+  margin: -12px auto 0
+
+.mapWrap
+  margin-bottom: 20px
+  h2
+    font: bold 24px / 36px Arial, Helvetica, sans-serif
+    text-transform: uppercase
+    color: #444444
+    margin: 0
+    text-align: center
+  .headingSub
+    color: #666666
+    padding: 10px 0
+    font-size: 18px
+    line-height: 24px
+    width: 680px
+    margin: 0 auto
+    text-align: center
+
+.locationMap
+  width: 620px
+  margin: 0 auto
+  position: relative
+  *margin-top: 46px
+
+.bubbleInfo
+  position: absolute
+  width: 25px
+  height: 23px
+
+.trigger
+  cursor: pointer
+  @include icon-sprite(location)
+  width: 25px
+  height: 23px
+  display: block
+
+.popup
+  position: absolute
+  display: none
+  background: #ffffff
+  border: 1px solid #c5c6c7
+  padding: 5px 10px
+  width: 140px
+  font-style: italic
+  color: #666666
+  font-size: 11px
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+
+.tooltip-down-arrow
+  @include icon-sprite(downArrow)
+  width: 17px
+  height: 10px
+  position: absolute
+  bottom: -10px
+  left: 100px
+
+.popup
+  ul
+    margin: 0
+    list-style-type: none
+  li .name
+    display: inline-block
+    width: 95px
+
+.colombiaMap
+  left: 167px
+  top: 250px
+
+.kenyaMap
+  left: 337px
+  top: 260px
+
+.indiaMap
+  left: 404px
+  top: 212px
+
+.countryMap1
+  left: 487px
+  top: 252px
+
+.countryMap2
+  left: 515px
+  top: 265px
+
+footer
+  background: url(../images/bgFooter.jpg)
+  -webkit-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 1)
+  -moz-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 1)
+  box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 1)
+
+.footerRow
+  border-bottom: 1px solid #3d3d3d
+  padding: 15px 0
+  overflow: hidden
+
+.footerMainLinks
+  margin: 0
+  list-style-type: none
+  float: left
+  li
+    float: left
+    margin-left: 7px
+    padding-left: 7px
+    border-left: #666666 1px solid
+    line-height: 14px
+    &:first-child
+      margin-left: 0
+      padding-left: 0
+      border-left: 0
+    a
+      color: #aaaaaa
+      font-size: 14px
+      &:hover
+        color: white
+    &.active a
+      color: white
+
+.footerLinks
+  margin: 0
+  list-style-type: none
+  float: right
+  li
+    font-size: 11px
+    margin-left: 7px
+    padding-left: 7px
+    border-left: #666666 1px solid
+    float: left
+    line-height: 14px
+    &:first-child
+      margin-left: 0
+      padding-left: 0
+      border-left: 0
+    a
+      color: #aaaaaa
+      &:hover
+        color: white
+
+.footerWrap
+  border-top: 1px solid #222222
+  color: #888888
+  font-size: 11px
+  padding: 10px 0 30px
+  overflow: hidden
+
+.socialLinks
+  float: right
+  margin: 0
+  list-style-type: none
+  li
+    float: left
+    a
+      width: 17px
+      height: 17px
+      display: block
+      text-indent: -100000px
+      @include icon-sprite(facebook)
+      margin: 3px 0 0 5px
+      float: left
+      &.twitter
+        @include icon-sprite(twitter)
+      &.linkedin
+        @include icon-sprite(linkedin)
+
+img, object, embed
+  height: auto
+  max-width: 100%
+
+.flex-control-paging li a 
+  @include icon-sprite(flexPaging)
+
+.flex-control-paging li a:hover 
+  @include icon-sprite(flexActive)
+
+.flex-control-paging li a.flex-active 
+  @include icon-sprite(flexActive)
+
+
+
+@media (min-width: 768px) and (max-width: 979px)
+  .navbar .container
+    width: 724px !important
+  .flex-control-nav li
+    margin: 0 0 0 58px
+  h3
+    font-size: 14px
+    a
+      font-size: 12px
+  .sectorsInner ul li
+    width: 200px
+
+@media (max-width: 979px)
+  .navbar .btn-navbar
+    float: left
+  .sectorsInner h2
+    font-size: 20px
+  .mapWrap
+    h2
+      font-size: 20px
+    .headingSub
+      font-size: 13px
+      width: auto
+      padding: 10px 20px
+      line-height: 20px
+  .navbar-inverse
+    .brand, .nav, .brand, .nav > li
+      background: none
+    .nav-collapse
+      .nav > li > a, .dropdown-menu a
+        color: #ffffff !important
+        font-weight: normal !important
+      .nav > li > a
+        &:hover, &:focus
+          background: none !important
+      .dropdown-menu a
+        &:hover, &:focus
+          background: none !important
+      .nav > li > a:hover, .dropdown-menu a:hover
+        color: #EEBE00 !important
+  .sectorsInner ul
+    text-align: center
+    li
+      float: none
+      display: inline-block
+      &:nth-child(4)
+        margin-left: 0
+        margin-top: 19px
+      &:nth-child(5)
+        margin-top: 19px
+  .navbar, .banner
+    margin-bottom: 30px
+
+@media (max-width: 767px)
+  body
+    padding: 0px !important
+  .container, .navbar .container
+    padding: 0 20px !important
+  .bannerInner, .titleOperate
+    margin-bottom: 30px
+  .flex-control-nav
+    background: none
+    li
+      margin: 0 0 0 3px
+  .sectorsInner ul li
+    width: 31%
+    margin-left: 15px
+
+@media (max-width: 641px)
+  .logo
+    float: none
+    margin-right: auto
+    margin-left: auto
+  .topMenu
+    float: none
+    text-align: center
+    margin-bottom: 10px
+    li
+      float: none
+      display: inline-block
+      margin-right: -4px
+      a .menu-txt
+        line-height: normal
+      &:hover a, &.active a
+        background: none
+      &:hover a .menu-txt, &.active a .menu-txt
+        border-bottom: 1px solid #EEBE00
+  .sectorsInner ul li
+    width: 174px
+    &:nth-child(4)
+      margin-left: 0
+  .locationMap
+    width: 440px
+  .colombiaMap
+    left: 115px
+    top: 176px
+  .kenyaMap
+    left: 240px
+    top: 173px
+  .indiaMap
+    left: 282px
+    top: 148px
+  .countryMap1
+    left: 340px
+    top: 175px
+  .countryMap2
+    left: 353px
+    top: 180px
+  .footerMainLinks
+    float: none
+    text-align: center
+    margin-bottom: 20px
+    li
+      float: none
+      display: inline-block
+  .footerLinks
+    float: none
+    text-align: center
+    li
+      float: none
+      display: inline-block
+
+@media (max-width: 480px)
+  .container, .navbar .container
+    padding: 0 10px !important
+  .topMenu li a .menu-icon, .locationMap
+    display: none
+  .sectorsInner ul
+    li
+      &:nth-child(3)
+        margin-left: 0
+      &:nth-child(4)
+        margin-left: 15px
+    h4.inline
+      margin: 5px auto
+  .mapWrap h2
+    font-size: 16px
+
+@media (max-width: 320px)
+  .mapWrap .headingSub
+    line-height: 16px
+  .sectorsInner
+    ul li
+      width: 200px
+      margin: 0 0 10px 0 !important
+    li h4
+      width: auto
+  .footerMainLinks
+    text-align: left
+  .footerLinks
+    text-align: left
+    li:last-child
+      margin-left: 0
+      padding-left: 0
+      border-left: 0
